@@ -1,0 +1,49 @@
+<!--components/zfd---图片上传.wxml-->
+
+<view class="weui-uploader {{extClass}}">
+  <view class="weui-uploader__hd">
+    <!-- 显示上传个数 -->
+    <div class="weui-uploader__overview">
+      <view class="weui-uploader__title">{{title}}</view>
+      <view class="weui-uploader__info" wx:if="{{maxCount > 1}}">{{currentFiles.length}}/{{maxCount}}</view>
+    </div>
+    <!-- 提示 -->
+    <view wx:if="{{tips}}" class="weui-uploader__tips">{{tips}}</view>
+    <!-- 提示 End -->
+    <view wx:else>
+      <slot name="tips"></slot>
+    </view>
+    <!-- weui-uploader__overview End -->
+  </view>
+  <!-- weui-uploader__bd -->
+  <view class="weui-uploader__bd">
+    <view class="weui-uploader__files">
+      <block wx:for="{{currentFiles}}" wx:key="*this">
+        <view class="weui-uploader__file" data-index="{{index}}" catchtap="previewImage">
+          <image class="weui-uploader__del" data-index="{{index}}" data-name="uploader__del" src="https://zysoss.oss-cn-beijing.aliyuncs.com/providerPic/802538/191010142333656.png"/>
+          <image class="weui-uploader__img" data-name="uploader__img" src="{{item.url}}" mode="aspectFill" />
+        </view>
+      </block>
+    </view>
+    <!-- weui-uploader__input -->
+    <view wx:if="{{currentFiles.length < maxCount}}" class="weui-uploader__input-box">
+      <view class="weui-uploader__input" bindtap="chooseImage"></view>
+    </view>
+    <!-- weui-uploader__input End -->
+  </view>
+  <!-- weui-uploader__bd End -->
+</view>
+<!-- weui-uploader End -->
+<view class="weui-gallery {{showPreview ? 'weui-gallery_show' : ''}} {{extClass}}">
+  <view class="weui-gallery__info">{{previewCurrent+1}}/{{previewImageUrls.length}}</view>
+  <swiper class="weui-gallery__img__wrp" bindtap="hideGallery" indicator-dots="{{false}}" bindchange="change"
+   current="{{previewCurrent}}" autoplay="{{false}}" duration="{{500}}">
+    <block wx:for="{{previewImageUrls}}" wx:key="{{item + '-' +index}}">
+      <swiper-item>
+        <image mode="aspectFit" class="weui-gallery__img" src="{{item}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+

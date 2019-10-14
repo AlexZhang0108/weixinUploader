@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "zfd-uploader": "/components/zfd_uploader/zfd_uploader"
+  }
+}

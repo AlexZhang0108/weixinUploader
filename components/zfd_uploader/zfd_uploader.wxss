@@ -1,0 +1,187 @@
+/* components/zfd_uploader/zfd_uploader.wxss */
+
+.weui-uploader {
+  /* background: red; */
+}
+
+/* 头部样式 */
+
+.weui-uploader__hd {
+  padding-bottom: 16px;
+}
+
+.weui-uploader__overview {
+  display: flex;
+  align-items: center;
+}
+
+.weui-uploader__title {
+  flex: 1;
+}
+
+.weui-uploader__info {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.weui-uploader__tips {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  line-height: 1.4;
+  padding-top: 4px;
+}
+
+.weui-uploader__tips {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  line-height: 1.4;
+  padding-top: 4px;
+}
+
+/* 组件功能样式 */
+
+.weui-uploader__bd {
+  margin-bottom: -8px;
+  margin-right: -8px;
+  overflow: hidden;
+}
+.weui-uploader__file {
+  position: relative;
+  float: left;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.weui-uploader__img {
+  display: block;
+  margin-top: 8px;
+  width: 120rpx;
+  height: 120rpx;
+}
+.weui-uploader__del{
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  right: -6px;
+  
+}
+.weui-uploader__input-box {
+float: left;
+position: relative;
+margin:8px;
+width: 120rpx;
+height:120rpx;
+box-sizing: border-box;
+background-color: #ededed;
+
+}
+
+.weui-uploader__input-box:before, .weui-uploader__input-box:after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #a3a3a3;
+}
+
+.weui-uploader__input-box:before {
+  width: 2px;
+  height: 32px;
+}
+
+.weui-uploader__input-box:after {
+  width: 32px;
+  height: 2px;
+}
+
+.weui-uploader__input-box:active {
+  border-color: #8b8b8b;
+}
+
+.weui-uploader__input-box:active:before, .weui-uploader__input-box:active:after {
+  background-color: #8b8b8b;
+}
+
+.weui-uploader__input {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+
+
+/* 图片显示 */
+.weui-gallery {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+  z-index: 99999;
+}
+
+.weui-gallery_show {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+}
+
+.weui-gallery__img__wrp {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  position: relative;
+  font-size: 0;
+}
+
+.weui-gallery__img {
+  background: center center no-repeat;
+  background-size: contain;
+  position: absoulte;
+  width: 100%;
+  height: 100%;
+}
+
+.weui-gallery__opr {
+  background-color: #0d0d0d;
+  color: #fff;
+  line-height: 60px;
+  min-height: 60px;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  text-align: center;
+}
+
+.weui-gallery__opr navigator {
+  color: #fff;
+}
+
+.weui-gallery__del {
+  display: block;
+}
+
+.weui-gallery__info {
+  color: #fff;
+  font-size: 17px;
+  line-height: 60px;
+  min-height: 60px;
+  text-align: center;
+}
+
+
+.weui-uploader__files{
+}

@@ -1,0 +1,12 @@
+<view>
+  <zfd-uploader currentFilesName="businessLicense" select="{{selectFile}}" upload="{{uplaodFile}}" bindsuccess="uploadSuccess" bindfail="uploadError" binddeleCcess="deletePic" files="{{businessLicenseFiles}}" max-size="1048576" max-count="1" title="照片"
+    tips="仅支持 .jpg .jpeg .bmp .png格式，图片大小为1M以内"></zfd-uploader>
+
+
+</view>
+
+<view>
+
+  <zfd-uploader currentFilesName="contract" select="{{selectFile}}" upload="{{uplaodFile}}" bindsuccess="uploadSuccess" bindfail="uploadError" binddeleCcess="deletePic" files="{{contractFiles}}" max-size="5242880" max-count="5" title="5照片" tips="最多5张，仅支持 .jpg .jpeg .bmp .png格式，图片大小为5M以内"></zfd-uploader>
+
+</view>
